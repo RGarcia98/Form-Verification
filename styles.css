@@ -2,3 +2,6 @@ body{
     background: lightgrey;
     
 }
+.errorMessage {
+    color: rgb(255, 9, 9);
+}
