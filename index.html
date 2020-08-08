@@ -11,25 +11,24 @@
 <body>
     <div>
     <!-- Input for user to input -->
-        <form action="" id="form">
-            <!--First & last name -->
-            <label for="fname">First Name:</label><br>
-            <input type="text" name="fname" id="fname" placeholder="First name" required><br>
-            <label for="lname">Last Name</label><br>
-            <input type="text" name="lname" id="lname" placeholder="Last name"><br>
+        <form  id="form" >
 
-            <!-- Email & username -->
-            <label for="email">E-mail:</label><br>
-            <input type="email" name="email" id="email" placeholder="E-mail"><br>
+            <!-- Username &email -->
             <label for="username">Username:</label><br>
-            <input type="text" name="username" id="username" placeholder="Username"><br>
+            <input type="text" name="username" id="username" placeholder="Username">
+            <div id="username-error" class="errorMessage"></div>
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <div id="email-error" class="errorMessage"></div>
 
             <!-- Password & confirm password -->
             <label for="pass">Password:</label><br>
-            <input type="password" name="pass" id="pass"><br>
+            <input type="password" name="pass" id="pass">
+            <div id="pass-error" class="errorMessage"></div>
             <label for="pass2">Confirm Password:</label><br>
-            <input type="password" name="pass2" id="pass2"><br><br>
-        
+            <input type="password" name="pass2" id="pass2">
+            <div id="pass2-error" class="errorMessage"></div><br>
+
             <input type="submit" value="submit" id="submit">
         
         </form>
