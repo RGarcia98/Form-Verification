@@ -12,35 +12,48 @@ console.log("Js is linked");
   const passError = document.getElementById("pass-error");
   const pass2Error = document.getElementById("pass2-error");
   var message = "";
+  var success = true;
 
 //function runs when user hits submit to check
 function checkIfValid() {
+  //prevents the page from refreshing incase the user makes a mistake it won't delete users text field 
   event.preventDefault();
 
+  //compares passwords only if both field have values
+if((pass.value != pass2.value) && (pass.value.length != 0 && pass2.value.length != 0)){
+  message = "passwords does not match";
+  passError.innerHTML = message;
+  pass2Error.innerHTML = message;
+  success = false;
+}
+
+//checks all fields to see if they are empty
 if(email.value.length == 0){
   message = "E-mail is empty, please enter email";
   emailError.innerHTML = message;
+  success = false;
 }
 if(username.value.length == 0){
   message = "username is empty, please enter a username";
   usernameError.innerHTML = message;
+  success = false;
 }
 if(pass.value.length == 0){
   message = "password is empty, please enter a password";
   passError.innerHTML = message;
+  success = false;
 }
 if(pass2.value.length == 0){
   message = "password is empty, please enter a password";
   pass2Error.innerHTML = message;
+  success = false;
 }
-  else{
-    window.open('success.html', '_blank');
+
+
+//if none of the if statements above were triggered then it must be a successful form that was filled
+if(success == true){
+    window.open('success.html', "_self");
   }
-
-  //stops the default action of submiting, and erasing users info they in text field
-  
-
-
   
 }
 
