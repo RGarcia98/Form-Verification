@@ -4,12 +4,13 @@ body{
 
 }
 
+
 .box{
     background-color: white;
     font-family: sans-serif;
     position: relative;
-    height: auto;
-    max-width: 40%;
+    height: 40%;
+    max-width: 40vw;
     padding: 40px 40px;
     margin: 40px auto;
     align-content: center;
@@ -22,8 +23,10 @@ body{
 #title{
     font-size: 40px;
     margin-bottom: 5px;
-
+    
 }
+
+
 form{
     font-size: 25px;
     margin: 1em;
@@ -34,6 +37,8 @@ input,label{
     padding: 5px 10px;
     font-size: 20px;
     border-radius: 10px;
+    max-width: 40vw;
+    height: auto;
 }
 input:focus{
     outline: none;
@@ -55,4 +60,26 @@ input:focus{
 .errorMessage {
     color: rgb(255, 9, 9);
     font-size: 20px;
+}
+@media only screen and (max-width: 450px){
+    #title{
+        font-size: 18px;
+    }
+    .box{
+        max-width: 60vw;
+    }
+    form{
+        font-size: 18px;
+        line-height: 2em;
+    }
+    input{
+        font-size: 15px;
+    }
+    label{
+        font-size: 18px;
+    }
+
+    .errorMessage{
+        font-size: 12px;
+    }
 }
