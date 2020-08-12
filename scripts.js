@@ -33,13 +33,12 @@ function checkIfValid() {
 
 
 //compares passwords only if both field have values to compare to 
-if((pass.value != pass2.value) && (pass.value.length != 0 && pass2.value.length != 0)){
+if(pass.value != pass2.value){
   message = "passwords does not match";
   passError.innerHTML = message;
   pass2Error.innerHTML = message;
   success = false;
 }
-
 
 //checks to see if password is between 6-20 characters
 if(pass.value.length <= 5){
@@ -52,6 +51,14 @@ if(pass.value.length > 20){
   message = "Please enter a password shorter than 20 characters";
   passError.innerHTML = message;
   pass2Error.innerHTML = "";
+  success = false;
+}
+
+
+//Checks if email has '@' 
+if(email.value.indexOf("@") == -1){
+  message = 'Please enter valid email';
+  emailError.innerHTML = message;
   success = false;
 }
 
